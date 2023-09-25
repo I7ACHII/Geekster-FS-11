@@ -44,7 +44,7 @@ public class UserService {
         return "address has been updated!!";
     }
 
-    public String updatePhone(Long userId, Long phoneNo) {
+    public String updatePhone(Long userId, String phoneNo) {
         List<User> users = userRepo.getAllUsers();
         for(User user : users){
             if(user.getUserId().equals(userId)){

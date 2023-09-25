@@ -13,7 +13,7 @@ public class BeanFactory {
 
     @Bean
     public List<User> getInitializedList(){
-        User user = new User(9128L, "Itachi", "I7ACHI", "New Delhi", 9578565567L);
+        User user = new User(9128L, "Itachi", "I7ACHI", "itachi@gmail.com","New Delhi", "919578565567");
         List<User> newList = new ArrayList<>();
         newList.add(user);
         return newList;
