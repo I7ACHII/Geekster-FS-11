@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface IEventRepo extends JpaRepository<Event, Long> {
 
-//    List<Event> findByDate(String localDate);
+    List<Event> findByDate(String localDate);
 }

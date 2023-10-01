@@ -23,15 +23,18 @@ public class EventService {
 
 
     public List<Event> getAllEventsByDate(String localDate) {
-        List<Event> allEvents = iEventRepo.findAll();
-        List<Event> eventsByDate = new ArrayList<>();
-        for(Event event : allEvents){
-            if(event.getDate().equals(localDate)){
-                eventsByDate.add(event);
-            }
-        }
 
-        return eventsByDate;
+        return iEventRepo.findByDate(localDate);
+
+//        List<Event> allEvents = iEventRepo.findAll();
+//        List<Event> eventsByDate = new ArrayList<>();
+//        for(Event event : allEvents){
+//            if(event.getDate().equals(localDate)){
+//                eventsByDate.add(event);
+//            }
+//        }
+
+//        return eventsByDate;
     }
 
     public String deleteById(Long eventId) {
