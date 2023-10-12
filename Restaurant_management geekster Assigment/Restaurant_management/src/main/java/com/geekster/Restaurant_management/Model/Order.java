@@ -24,4 +24,8 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "fk_foodItem_Id")
     FoodItem foodItem;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_user_id")
+    User user;
 }

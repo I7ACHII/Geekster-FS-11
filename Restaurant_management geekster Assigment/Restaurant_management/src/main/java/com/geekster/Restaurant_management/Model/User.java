@@ -24,5 +24,7 @@ public class User {
     private String userPass;
 
     private String userPhoneNo;
+
+    @Enumerated(value = EnumType.STRING)
     private UserType userType;
 }
