@@ -21,7 +21,9 @@ public class OrderController {
 
     @PostMapping("placeOrder/{userEmail}/{tokenValue}")
     public String placeOrder (@RequestBody Order order, @PathVariable String userEmail, @PathVariable String tokenValue){
-        if(authenticationtokenService.Authenticate(userEmail, tokenValue))
-        return orderService.placeOrder(order, userEmail, tokenValue);
+        if(authenticationtokenService.Authenticate(userEmail, tokenValue)){
+            return orderService.placeOrder(order, userEmail, tokenValue);
+        }
+        return "Please! Sign In to place order";
     }
 }

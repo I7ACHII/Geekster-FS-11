@@ -25,11 +25,15 @@ public class AuthenticationToken {
     @JoinColumn(name = "fk_user_id")
     User user;
 
+
+
     public AuthenticationToken(User user){
         this.user = user;
         this.tokenValue = UUID.randomUUID().toString();
         this.tokenCreationDateTime = LocalDateTime.now();
     }
+
+
 
 
 }
